@@ -1,0 +1,9 @@
+.navlink{
+    color:black;
+    text-decoration: none;
+}
+
+.navLink:focus{
+    color: hsl(22,65%,57%);
+    transition: all .5s ease-in;
+}

@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import NavBar from './components/NavBar';
+import {BrowserRouter as Router, Routes,Route} from "react-router-dom";
+
+import Homepage from './components/Homepage';
+import Headphone from './components/Headphone';
+import Speaker from './components/Speaker';
+import Earphone from './components/Earphone';
+import PageNotFound from './components/PageNotFound';
+import Cart from './components/Cart';
 
 function App() {
   return (
+    
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+      <NavBar/>
+       <Routes>
+            <Route path='/' element={<Homepage/>}/>
+            <Route path='/headphone' element={<Headphone/>}/>
+            <Route path='/speakers' element={<Speaker/>}/>
+            <Route path='/earphones' element={<Earphone/>}/>
+            <Route path="/cart" element={<Cart/>}/>
+            <Route path='/*' element={<PageNotFound/>}/>
+       </Routes>
+      </Router>
+
+      
     </div>
   );
 }

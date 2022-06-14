@@ -1,0 +1,12 @@
+.audiogear img{
+    width: 85%;
+    height: 45rem;
+    object-fit: contain;
+
+}
+.audiogear{
+    margin-top: 2rem;
+}
+span{
+    color:hsl(22,65%,57%)
+}

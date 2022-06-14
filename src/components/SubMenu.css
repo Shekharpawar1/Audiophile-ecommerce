@@ -1,0 +1,8 @@
+.subMenu{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap:7rem;
+    margin-top: 8rem;
+    place-items: center;
+    
+}
